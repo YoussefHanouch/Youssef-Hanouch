@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <br></br>
       <Hero currentLanguage={currentLanguage} />
       <About currentLanguage={currentLanguage} />
       <Skills currentLanguage={currentLanguage} />

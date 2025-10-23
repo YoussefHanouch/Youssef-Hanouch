@@ -90,19 +90,19 @@ const demoProjects = [
     githubUrl: "https://github.com/YoussefHanouch/Station_Manager.git",
     liveUrl: "https://station-manager-y6n4.vercel.app/"
   },
-  {
-    id: 5,
-    title: { en: "Portfolio Website", de: "Portfolio Website" },
-    description: {
-      en: "First portfolio website with modern design and animations",
-      de: "Erste Portfolio-Website mit modernem Design und Animationen"
-    },
-    image: "./images/first.png",
-    technologies: ["JavaScript", "React", "Tailwind CSS", "CSS3", "JSX"],
-    type: "project",
-    // githubUrl: "https://github.com/youssefhanouch/Portfolio_Youssef_Hanouch",
-    liveUrl: "https://youssefhanouch.github.io/Portfolio_Youssef_Hanouch/"
-  },
+  // {
+  //   id: 5,
+  //   title: { en: "Portfolio Website", de: "Portfolio Website" },
+  //   description: {
+  //     en: "First portfolio website with modern design and animations",
+  //     de: "Erste Portfolio-Website mit modernem Design und Animationen"
+  //   },
+  //   image: "./images/first.png",
+  //   technologies: ["JavaScript", "React", "Tailwind CSS", "CSS3", "JSX"],
+  //   type: "project",
+  //   // githubUrl: "https://github.com/youssefhanouch/Portfolio_Youssef_Hanouch",
+  //   liveUrl: "https://youssefhanouch.github.io/Portfolio_Youssef_Hanouch/"
+  // },
   {
     id: 6,
     title: { en: "Travel Agency Booking Platform", de: "Reisebüro Buchungsplattform" },

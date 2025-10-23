@@ -14,7 +14,7 @@ const Header = () => {
     { id: 'skills', en: 'Skills', de: 'Fähigkeiten' },
     { id: 'projects', en: 'Projects', de: 'Projekte' },
     { id: 'education', en: 'Education', de: 'Bildung' },
-      { id: 'certificates', en: 'Certificates', de: 'Zertifikate' },
+    { id: 'certificates', en: 'Certificates', de: 'Zertifikate' },
     { id: 'contact', en: 'Contact', de: 'Kontakt' }
   ];
 
@@ -29,12 +29,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-    <div className="logo">
-  <span className="logo-text">Youssef Hanouch</span>
-  <span className="logo-subtitle">
-    {currentLanguage === 'en' ? 'Developer & Trainer' : 'Entwickler & Trainer'}
-  </span>
-</div>
+        <div className="logo">
+          <span className="logo-text">Youssef Hanouch</span>
+          <span className="logo-subtitle">
+            {currentLanguage === 'en' ? 'Developer & Trainer' : 'Entwickler & Trainer'}
+          </span>
+        </div>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
@@ -48,14 +48,27 @@ const Header = () => {
                 </button>
               </li>
             ))}
+            
+            {/* Sélecteur de langue dans le menu mobile */}
+            <li className="nav-item mobile-language-toggle">
+              <LanguageToggle 
+                currentLanguage={currentLanguage} 
+                onLanguageChange={changeLanguage} 
+                isMobile={true}
+              />
+            </li>
           </ul>
         </nav>
 
         <div className="header-actions">
-          <LanguageToggle 
-            currentLanguage={currentLanguage} 
-            onLanguageChange={changeLanguage} 
-          />
+          {/* Sélecteur de langue pour desktop */}
+          <div className="desktop-language-toggle">
+            <LanguageToggle 
+              currentLanguage={currentLanguage} 
+              onLanguageChange={changeLanguage} 
+              isMobile={false}
+            />
+          </div>
           
           <button 
             className="menu-toggle"
