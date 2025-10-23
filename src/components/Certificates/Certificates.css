@@ -1,0 +1,125 @@
+.certificates {
+  background: linear-gradient(135deg, #181c2f 0%, #23263a 100%);
+  padding: 3rem 0;
+}
+
+.certificates-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.certificates-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.certificates-header h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #4ecdc4 0%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.certificates-header p {
+  color: #4ecdc4;
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.certificate-card {
+  background: rgba(35,38,58,0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(78,205,196,0.13);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  padding-bottom: 1rem;
+  border: 2px solid #4ecdc4;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 12px 40px rgba(255,107,107,0.18);
+  transform: translateY(-6px) scale(1.03);
+  border-color: #4ecdc4;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 2px 12px rgba(78,205,196,0.10);
+}
+
+.certificate-info {
+  padding: 1.2rem 1rem 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.certificate-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4ecdc4;
+  margin-bottom: 0.3rem;
+}
+
+.certificate-info p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.certificate-info span {
+  color: #ffff;
+  font-size: 0.98rem;
+  opacity: 0.9;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.certificate-info a {
+  display: inline-block;
+  background: linear-gradient(90deg, #4ecdc4 0%, #4ecdc4 100%);
+  color: #181c2f;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.certificate-info a:hover {
+  background: #4ecdc4;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .certificates-header h2 {
+    font-size: 1.3rem;
+  }
+  .certificates-grid {
+    gap: 1rem;
+  }
+  .certificate-card img {
+    height: 120px;
+  }
+}
