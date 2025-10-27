@@ -51,71 +51,73 @@ const ContactPage = ({ currentLanguage }) => {
           <p className="contact-subtitle">{currentContact.subtitle}</p>
         </div>
 
-        <div className="contact-content">
+          <div className="flex flex-col lg:flex-row gap-10 bg-white shadow-xl rounded-3xl p-8 md:p-10">
           {/* --- Infos de contact --- */}
-          <div className="contact-info">
-            <h2>
-              {currentLanguage === 'en'
-                ? 'Contact Information'
-                : currentLanguage === 'de'
-                ? 'Kontaktinformationen'
-                : 'Informations de contact'}
-            </h2>
+          <div className="w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl font-bold mb-6 text-gray-800">
+                {currentLanguage === 'en'
+                  ? 'Contact Information'
+                  : currentLanguage === 'de'
+                  ? 'Kontaktinformationen'
+                  : 'Informations de contact'}
+              </h2>
 
-            <div className="contact-item">
-              <div className="contact-icon">📧</div>
-              <div className="contact-details">
-                <h3>
-                  {currentLanguage === 'en'
-                    ? 'Email'
-                    : currentLanguage === 'de'
-                    ? 'E-Mail'
-                    : 'E-mail'}
-                </h3>
-                <p>{currentContact.email}</p>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">📱</div>
-              <div className="contact-details">
-                <h3>
-                  {currentLanguage === 'en'
-                    ? 'Phone'
-                    : currentLanguage === 'de'
-                    ? 'Telefon'
-                    : 'Téléphone'}
-                </h3>
-                <p>{currentContact.phone}</p>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">📍</div>
-              <div className="contact-details">
-                <h3>
-                  {currentLanguage === 'en'
-                    ? 'Location'
-                    : currentLanguage === 'de'
-                    ? 'Standort'
-                    : 'Localisation'}
-                </h3>
-                <p>{currentContact.address}</p>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">⏰</div>
-              <div className="contact-details">
-                <h3>
-                  {currentLanguage === 'en'
-                    ? 'Response Time'
-                    : currentLanguage === 'de'
-                    ? 'Antwortzeit'
-                    : 'Délai de réponse'}
-                </h3>
-                <p>{currentContact.responseTime}</p>
-              </div>
+              {[
+                {
+                  icon: '📧',
+                  title:
+                    currentLanguage === 'en'
+                      ? 'Email'
+                      : currentLanguage === 'de'
+                      ? 'E-Mail'
+                      : 'E-mail',
+                  value: currentContact.email,
+                },
+                {
+                  icon: '📱',
+                  title:
+                    currentLanguage === 'en'
+                      ? 'Phone'
+                      : currentLanguage === 'de'
+                      ? 'Telefon'
+                      : 'Téléphone',
+                  value: currentContact.phone,
+                },
+                {
+                  icon: '📍',
+                  title:
+                    currentLanguage === 'en'
+                      ? 'Location'
+                      : currentLanguage === 'de'
+                      ? 'Standort'
+                      : 'Localisation',
+                  value: currentContact.address,
+                },
+                {
+                  icon: '⏰',
+                  title:
+                    currentLanguage === 'en'
+                      ? 'Response Time'
+                      : currentLanguage === 'de'
+                      ? 'Antwortzeit'
+                      : 'Délai de réponse',
+                  value: currentContact.responseTime,
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 bg-gray-50 border border-gray-200 p-4 rounded-xl mb-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="text-3xl">{item.icon}</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{item.value}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* --- Réseaux sociaux --- */}
@@ -142,7 +144,7 @@ const ContactPage = ({ currentLanguage }) => {
           </div>
 
           {/* --- Formulaire de contact --- */}
-          <div className="contact-form-section">
+          {/* <div className="contact-form-section"> */}
             {isSubmitted ? (
               <div className="success-message">
                 <h3>
@@ -167,7 +169,7 @@ const ContactPage = ({ currentLanguage }) => {
                 onSubmit={handleFormSubmit}
               />
             )}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>

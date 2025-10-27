@@ -75,15 +75,7 @@ const Footer = () => {
                 <span className="social-icon">💼</span>
                 LinkedIn
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                <span className="social-icon">🐦</span>
-                Twitter
-              </a>
+           
             </div>
           </div>
 
