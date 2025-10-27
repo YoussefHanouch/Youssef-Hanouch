@@ -70,7 +70,8 @@ const ContactForm = ({ currentLanguage, onSubmit }) => {
     >
       {/* Nom */}
       <div className="flex flex-col ">
-        <label className="text-black-700 font-semibold mb-2">{currentLabels.name} *</label>
+        <label className="text-black font-semibold mb-2">{currentLabels.name} *</label>
+        
         <input
           type="text"
           name="name"
@@ -86,7 +87,7 @@ const ContactForm = ({ currentLanguage, onSubmit }) => {
 
       {/* Email */}
       <div className="flex flex-col">
-        <label className=" font-semibold mb-2">{currentLabels.email} *</label>
+        <label className="text-black font-semibold mb-2">{currentLabels.email} *</label>
         <input
           type="email"
           name="email"
@@ -102,7 +103,7 @@ const ContactForm = ({ currentLanguage, onSubmit }) => {
 
       {/* Sujet */}
       <div className="flex flex-col">
-        <label className="text-black-700 font-semibold mb-2">{currentLabels.subject} *</label>
+        <label className="text-black font-semibold mb-2">{currentLabels.subject} *</label>
         <input
           type="text"
           name="subject"
@@ -118,7 +119,7 @@ const ContactForm = ({ currentLanguage, onSubmit }) => {
 
       {/* Message */}
       <div className="flex flex-col">
-        <label className="text-black-700 font-semibold mb-2">{currentLabels.message} *</label>
+        <label className="text-black font-semibold mb-2">{currentLabels.message} *</label>
         <textarea
           name="message"
           rows="5"
