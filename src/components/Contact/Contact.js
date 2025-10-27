@@ -164,7 +164,10 @@ const ContactPage = ({ currentLanguage }) => {
                 </p>
               </div>
             ) : (
-              ''
+              <ContactForm
+                currentLanguage={currentLanguage}
+                onSubmit={handleFormSubmit}
+              />
             )}
           {/* </div> */}
         </div>

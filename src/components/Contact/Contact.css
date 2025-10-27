@@ -210,7 +210,6 @@
 .form-group label {
   font-weight: 600;
   margin-bottom: 8px;
-  color: #333;
 }
 
 .form-group input,
@@ -274,7 +273,7 @@
   }
   
   .form-group label {
-    color: #e2e8f0;
+    color: #1769d4;
   }
   
   .form-group input,
