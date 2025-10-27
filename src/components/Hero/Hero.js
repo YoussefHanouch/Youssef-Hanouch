@@ -59,12 +59,13 @@ const Hero = ({ currentLanguage }) => {
 
 const downloadCV = () => {
   const link = document.createElement('a');
-  link.href = '/images/Lebenslauf_Hanouch_Youssef.pdf'; // chemin correct vers ton fichier
+  link.href = 'https://drive.google.com/uc?export=download&id=1xI5Vb4RoCtsx_fDkBwdWucrP8NcYA4_Y';
   link.download = 'Lebenslauf_Hanouch_Youssef.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 };
+
 
 
   return (
