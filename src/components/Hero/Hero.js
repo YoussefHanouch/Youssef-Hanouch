@@ -57,14 +57,15 @@ const Hero = ({ currentLanguage }) => {
     }
   };
 
-  const downloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/cv-youssef-hanouch.pdf'; // mettre ton vrai fichier CV ici
-    link.download = `CV_Youssef_Hanouch.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+const downloadCV = () => {
+  const link = document.createElement('a');
+  link.href = '/images/Lebenslauf_Hanouch_Youssef.pdf'; // chemin correct vers ton fichier
+  link.download = 'Lebenslauf_Hanouch_Youssef.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <section id="home" className="hero">
